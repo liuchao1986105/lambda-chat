@@ -1,0 +1,70 @@
+.transition(@time){
+    -webkit-transition: all @time;
+    -webkit-transition: all @time;
+    transition: all @time;
+}
+//进出场动画
+.system-setting-box-enter {
+    transform: scale(0.5);
+    opacity: 0.5;
+}
+
+.system-setting-box-enter.system-setting-box-enter-active {
+    .transition(0.2s);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.system-setting-box-leave {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.system-setting-box-leave.system-setting-box-leave-active {
+    .transition(0.2s);
+    transform: scale(0.5);
+    opacity: 1;
+}
+//样式
+.system-setting-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.system-setting-bg {
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    .system-setting-container;
+}
+.system-setting-box {
+    width: 310px;
+    margin: auto;
+}
+.system-setting-content {
+    width: 100%;
+    height: 160px;
+    background: rgb(250,250,250);
+}
+.system-setting-header,.system-setting-footer {
+    height: 45px;
+    text-align: center;
+    background: white;
+}
+.system-setting-toggle{
+    padding: 20px 10px 0px 20px;
+}
+.system-setting-btn{
+    background: #434447;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    padding: 6px 45px;
+}
+.system-setting-input{
+    padding-left: 15px;
+}
+.system-setting-input input{
+    width: 170px;
+}
